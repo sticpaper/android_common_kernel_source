@@ -2147,6 +2147,10 @@ static void default_options(struct f2fs_sb_info *sbi)
 		F2FS_OPTION(sbi).discard_unit = DISCARD_UNIT_BLOCK;
 	}
 
+	set_opt(sbi, ATGC);
+	set_opt(sbi, AGE_EXTENT_CACHE);
+	set_opt(sbi, GC_MERGE);
+
 #ifdef CONFIG_F2FS_FS_XATTR
 	set_opt(sbi, XATTR_USER);
 #endif
